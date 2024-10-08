@@ -108,13 +108,18 @@ module.exports = {
       }),
 
       new HtmlWebpackPlugin({
+        template: './src/articles/article1.html',
+        filename: './articles/article1.html'
+      }),
+
+      new HtmlWebpackPlugin({
         template: './src/dreamBook/dreamBook.html',
         filename: './dreamBook/dreamBook.html'
       }),
 
       new HtmlWebpackPlugin({
-        template: './src/tests.html',
-        filename: './tests.html'
+        template: './src/tests/tests.html',
+        filename: './tests/tests.html'
       }),
 
       new HtmlWebpackPlugin({
