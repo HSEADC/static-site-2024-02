@@ -103,8 +103,8 @@ module.exports = {
 
       // страницы разделов
       new HtmlWebpackPlugin({
-        template: './src/articles/articles.html',
-        filename: './articles/articles.html'
+        template: './src/articles.html',
+        filename: './articles.html'
       }),
 
       new HtmlWebpackPlugin({
@@ -113,28 +113,28 @@ module.exports = {
       }),
 
       new HtmlWebpackPlugin({
-        template: './src/dreamBook/dreamBook.html',
-        filename: './dreamBook/dreamBook.html'
+        template: './src/dreamBook.html',
+        filename: './dreamBook.html'
       }),
 
       new HtmlWebpackPlugin({
-        template: './src/tests/tests.html',
-        filename: './tests/tests.html'
+        template: './src/tests.html',
+        filename: './tests.html'
       }),
 
       new HtmlWebpackPlugin({
-        template: './src/aboutUS/aboutUs.html',
-        filename: './aboutUs/aboutUs.html'
+        template: './src/aboutUs.html',
+        filename: './aboutUs.html'
       }),
 
       new HtmlWebpackPlugin({
-        template: './src/aboutDreams/interpretations.html',
-        filename: './aboutDreams/interpretations.html'
+        template: './src/dreamBook/interpretations.html',
+        filename: './dreamBook/interpretations.html'
       }),
 
       new HtmlWebpackPlugin({
-        template: './src/layout/advices.html',
-        filename: './layout/advices.html'
+        template: './src/dreamBook/advices.html',
+        filename: './dreamBook/advices.html'
       }),
 
     
