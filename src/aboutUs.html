@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="{ссылка}">
+    <meta property="og:title" content="название">
+    <meta property="og:description" content="текст">
+    <meta property="og:image" content="{картинка}">
+    <title>sto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="texture"></div>
+
+    <header>
+      <div class="gradientBg">
+
+        <svg xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <filter id="goo">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+              <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+              <feBlend in="SourceGraphic" in2="goo" />
+            </filter>
+          </defs>
+        </svg>
+
+        <div class="gradientContainer">
+          <div class="g1"></div>
+          <div class="g2"></div>
+          <div class="g3"></div>
+          <div class="g4"></div>
+          <div class="g5"></div>
+          <div class="interactive"></div>
+  
+        </div>
+      </div>
+
+      <div class="wayContainer">
+        <p class="wayLine">home</p>
+        <button class="contact">contact</button>
+      </div>
+
+      <h1 class="mainTitle">snok(s)</h1>
+
+      <div class="mainNavContainer">
+        <nav class="mainNav">
+          <a class="navChoose activeNav" href="#" id="nav1" onclick="return false;">about us</a>
+          <a class="navChoose" href="#" id="nav2" onclick="return false;">dream book</a>
+          <a class="navChoose" href="#" id="nav3" onclick="return false;">articles</a>
+          <a class="navChoose" href="#" id="nav4" onclick="return false;">tests</a>
+        </nav>
+
+        <div class="borderChoose"></div>
+      </div>
+    </header>
+
+    <main>
+      <section class="sortsOfArticles">
+       
+        <div class="sortOfArticle" id="article1">
+          <img class="textImg" src="./images/articleSortText.svg" id="textImg1">
+          <div class="articleImg" id="articleImg1"></div>
+          <div class="circle" id="circle1"></div>
+        </div>
+        
+        <div class="sortOfArticle" id="article21">
+          <img class="textImg" src="./images/articleSortText.svg" id="textImg2">
+          <div class="articleImg" id="articleImg2"></div>
+          <div class="circle" id="circle2"></div>
+        </div>
+        
+        <div class="sortOfArticle" id="article3">
+          <img class="textImg" src="./images/articleSortText.svg" id="textImg3">
+          <div class="articleImg" id="articleImg3"></div>
+          <div class="circle" id="circle3"></div>
+        </div>
+
+        <div class="sortOfArticle" id="article4">
+          <img class="textImg" src="./images/articleSortText.svg" id="textImg4">
+          <div class="articleImg" id="articleImg4"></div>
+          <div class="circle" id="circle4"></div>
+        </div>
+        
+        <div class="sortOfArticle" id="article5">
+          <img class="textImg" src="./images/articleSortText.svg" id="textImg5">
+          <div class="articleImg" id="articleImg5"></div>
+          <div class="circle" id="circle5"></div>
+        </div>
+        
+        <div class="sortOfArticle" id="article6">
+          <img class="textImg" src="./images/articleSortText.svg" id="textImg6">
+          <div class="articleImg" id="articleImg6"></div>
+          <div class="circle" id="circle6"></div>
+        </div>
+        
+        <div class="sortOfArticle" id="article7">
+          <img class="textImg" src="./images/articleSortText.svg" id="textImg7">
+          <div class="articleImg" id="articleImg7"></div>
+          <div class="circle" id="circle7"></div>
+        </div>
+
+        <div class="sortOfArticle" id="article8">
+          <img class="textImg" src="./images/articleSortText.svg" id="textImg8">
+          <div class="articleImg" id="articleImg8"></div>
+          <div class="circle" id="circle8"></div>
+        </div>
+
+      </section>
+
+      <div class="allSortsContainer">
+        <p class="allSorts">all sorts of articles</p>
+      </div>
+    </main>
+    <div class="cursorDot"></div>
+    <div class="cursorOutline"></div>
+  </body>
+</html>
