@@ -1,2 +1,3 @@
 import './index.css';
-import './js/aboutUs'
+import './js/aboutUs.js';
+import './js/articles.js'

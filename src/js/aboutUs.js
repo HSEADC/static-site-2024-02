@@ -1,4 +1,5 @@
 import AOS from 'aos';
+import TypeIt from "typeit";
 import 'aos/dist/aos.css'; 
 
 
@@ -28,6 +29,82 @@ AOS.init({
 
 
 document.addEventListener("DOMContentLoaded", () => {
+
+    const pages = {
+        1: "./aboutUs.html",
+        2: "./dreamBook.html",
+        3: "./articles.html",
+        4: "./tests.html"
+    }
+
+    document.querySelector(".mainNav").addEventListener("click", (e) => {
+        if (e.target.className.includes("navChoose")) {
+            let pageId = Number(e.target.id.split("")[3])
+            setTimeout(() => {
+                window.location.href = `${pages[pageId]}`
+            }, 1000);
+        }
+    })
+
+
+    new TypeIt("#typing", {
+        speed: 14,
+        waitUntilVisible: true,
+    }).go();
+    
+
+    const posTests = {
+        1: "15",
+        2: "0",
+        3: "-8",
+        4: "-17",
+        5: "-26"
+    }
+
+    function moveTests(testId) {
+        document.querySelector(".movingTestsBox").style.top=`${posTests[testId] * window.innerWidth / 100}px`
+        for (let i = 1; i <= 5; i++) {
+            console.log(i)
+            if (document.getElementById(`testImg${i}`).className.includes("activeTestImgMiddle")) {
+                document.getElementById(`testImg${i}`).classList.remove("activeTestImgMiddle")
+            }
+            if (document.getElementById(`testImg${i}`).className.includes("activeTestImgFull")) {
+                document.getElementById(`testImg${i}`).classList.remove("activeTestImgFull")
+                document.getElementById(`testText${i}`).classList.remove("activeTestText")
+                document.getElementById(`num${i}`).classList.remove("numClicked")
+            }
+        }
+        document.getElementById(`testImg${testId}`).classList.add("activeTestImgFull");
+        document.getElementById(`testText${testId}`).classList.add("activeTestText");
+        document.getElementById(`num${testId}`).classList.add("numClicked")
+        if (testId - 1 > 0) {
+            document.getElementById(`testImg${testId-1}`).classList.add("activeTestImgMiddle");
+        }
+        if (testId + 1 <= 5) {
+            document.getElementById(`testImg${testId+1}`).classList.add("activeTestImgMiddle");
+        }
+
+    }
+
+
+    document.querySelector(".testsContainer").addEventListener("click", (e) => {
+        if (e.target.className.includes("testBlockImg")) {
+            let testId = Number(e.target.id.split("")[7])
+
+            moveTests(testId)
+
+        }
+     })
+
+     document.querySelector(".nusNumbers").addEventListener("click", (e) => {
+        if (e.target.className.includes("num")) {
+            moveTests(Number(e.target.id.split("")[3]))
+        }
+    })
+
+
+
+
     const interBubble = document.querySelector(".interactive");
     let curX = 0;
     let curY = 0;
@@ -51,7 +128,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function navChoose(id) {
-        console.log(navBorderPos[id] * window.innerWidth / 100)
         document.querySelector(".borderChoose").animate({
             top: `${navBorderPos[id] * window.innerWidth / 100}px`,   
         }, {
